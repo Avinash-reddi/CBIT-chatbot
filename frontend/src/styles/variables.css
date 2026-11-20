@@ -1,0 +1,78 @@
+:root {
+  /* Eco-friendly color palette */
+  --primary: #2E7D6F;
+  --primary-light: #4DB6A0;
+  --primary-dark: #1A5C50;
+  --primary-50: #E8F5F1;
+  --secondary: #1B3A5C;
+  --secondary-light: #2A5A8C;
+  --secondary-dark: #0F2440;
+  --accent-green: #6FCF97;
+  --accent-green-light: #B8E8CC;
+  --accent-blue: #5DADE2;
+  --accent-blue-light: #AED6F1;
+  --success: #27AE60;
+  --success-light: #D4EFDF;
+  --warning: #F2C94C;
+  --warning-light: #FDF2D0;
+  --danger: #EB5757;
+  --danger-light: #FADBD8;
+  --gray-50: #F7FAFA;
+  --gray-100: #EDF2F2;
+  --gray-200: #DAE3E3;
+  --gray-300: #BDC9C9;
+  --gray-400: #8FA3A3;
+  --gray-500: #5F7A7A;
+  --gray-600: #3E5656;
+  --gray-700: #2D3F3F;
+  --gray-800: #1C2B2B;
+  --gray-900: #0F1A1A;
+  --white: #FFFFFF;
+  --chat-user-bg: #2E7D6F;
+  --chat-bot-bg: #F0F7F4;
+  --chat-bg-gradient: linear-gradient(160deg, #0F2440 0%, #1B3A5C 40%, #1A5C50 100%);
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-full: 9999px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+  --shadow-xl: 0 20px 50px rgba(0, 0, 0, 0.25);
+  --shadow-glow: 0 0 20px rgba(46, 125, 111, 0.3);
+  --font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--gray-900);
+  background: var(--gray-50);
+  line-height: 1.6;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* PWA safe area support */
+@supports (padding: env(safe-area-inset-bottom)) {
+  .chat-input-container {
+    padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  }
+  .chat-fab {
+    bottom: calc(24px + env(safe-area-inset-bottom));
+  }
+}
+
+/* Touch-friendly tap targets (min 44px) */
+button, a, input, select, textarea {
+  min-height: 36px;
+}
+.chat-input, .chat-send-btn, .quick-action-btn, .bot-action-btn, .menu-card {
+  touch-action: manipulation;
+}
